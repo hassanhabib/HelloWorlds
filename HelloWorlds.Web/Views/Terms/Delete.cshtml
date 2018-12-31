@@ -1,0 +1,56 @@
+﻿@model HelloWorlds.Web.Models.Term
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Term</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OriginalText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OriginalText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnglishText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnglishText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Language)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Language)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgrammingLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProgrammingLanguage)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
